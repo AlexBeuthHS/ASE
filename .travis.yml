@@ -2,4 +2,4 @@ language: java
 jdk:
   - oraclejdk9
 install: true
-script: ./mvnw clean install
+script: mvn clean install test
