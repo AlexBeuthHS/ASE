@@ -4,7 +4,7 @@ jdk:
 install: true
 addons:
   sonarcloud:
-    organization: "sonarcloud_organization_key" # the key of the org you chose at step #3
+    organization: "alexbeuthhs-github" # the key of the org you chose at step #3
 script:
 - mvn clean install test
 - sonar-scanner
