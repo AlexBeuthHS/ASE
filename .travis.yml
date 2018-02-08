@@ -4,7 +4,7 @@ jdk:
 install: true
 addons:
   sonarcloud:
-    organization: "alexbeuthhs-github" # the key of the org you chose at step #3
+    organization: "alexbeuthhs-github" # the key of the org
 script:
 - mvn clean install test
-- sonar-scanner
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
