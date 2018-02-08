@@ -1,6 +1,6 @@
 public class SimpleClass {
 
     public String returnThis(String p){
-        return p;
+        return "2";
     }
 }
