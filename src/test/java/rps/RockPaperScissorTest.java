@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
+import java.util.NoSuchElementException;
 
 public class RockPaperScissorTest {
 
@@ -31,11 +32,19 @@ public class RockPaperScissorTest {
         }
 
         @Test
-        public void game() {
+        public void happyCaseGame() {
             ByteArrayInputStream in = new ByteArrayInputStream("r".getBytes());
             System.setIn(in);
             RockPaperScissor game = new RockPaperScissor();
             game.startGame();
         }
+
+    @Test(expected = NoSuchElementException.class)
+    public void gameWithWrongInput() {
+        ByteArrayInputStream in = new ByteArrayInputStream("x".getBytes());
+        System.setIn(in);
+        RockPaperScissor game = new RockPaperScissor();
+        game.startGame();
+    }
 
 }
