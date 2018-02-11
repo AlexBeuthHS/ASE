@@ -1,6 +1,6 @@
 # Rock Paper Scissor Console Game 
 
-### I used IntelliJ IDE with Git, GitHub, SonarCloud and Travis CI.
+### I used IntelliJ IDE with Git, GitHub, SonarCloud and Travis CI. As I will also state later on this is a java project but the functional part is covered in my clojure example.
 
 
 ##  1.UML
