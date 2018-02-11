@@ -44,3 +44,25 @@ It deploys the application on sandbox and two production servers and also runs a
 As i could not cover the functional programming part completely (but i tried some functional programming aspects with lambdas in my Java version) i decided to rewrite my console game as well in clojure which should cover both tasks (7. and 9.).
 The file can be found under resources.
 Brief explaination:
+The first function "getPlayersHand" takes no arguments and returns "r" for rock, "p" for paper and "s" for scissors
+It iss a get function with a map of each of the valued Strings as keys. Each is associated with the value true. When the String of "hand" is looked up in this map, and the users entered String is not one of these Strings, it will return nil. That is because that key is not found in the map
+Which means it returns nil for invalid input.
+It contains a let form that binds the value of readline to "hand".
+In this case readline is a standard libary function that takes the console input and blocks the program.
+In the let body  there is an if with the condition wether or not the "hand" is one of the three strings.
+If the condition of the if is true the let form will return "hand" and also the function will return "hand", otherwise both return nil.
+
+The computeWinner function takes the "hand" from the two players and returns 1 when the first player wins and two for the second, and 0 if it is a tie (both players same hand)
+The guesses are passed to the function in a form of a string of a lowercase character r, p or s.
+The first this the function computeWinner does is a let form binding to the symbol playerVsComputer ( a vector of both, "Hand" one and "hand" two)
+In the body of the let form there is a "cond" form, a condition form.
+The first condition checks if both guesses are equal, if so returns 0 and other conditions depend on what guess beats the other.
+
+The function startGame starts with a let form in which it binds to computersHand the result of "rand-nth" with the argument of a vector with the strings r, p , s.
+The "rand-nth" function returns a random argument from its argument sequence.
+The return value of getPlayersHand is bound to playersHand and will ask the user to enter "r" "p" or "s".
+The winner is bound to the result of a call to the function computeWinner.
+Finally the computers and players hand are printed.
+It follows a conditional form that computes the winner and prints it.
+
+The "startgame" function is put in a loop, that its possible to play again.
