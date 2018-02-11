@@ -10,22 +10,25 @@ import java.util.stream.Stream;
 public class RockPaperScissor {
 
     private static final Logger logger = LogManager.getLogger(RockPaperScissor.class);
+    public static final String TIE = "Tie!";
+    public static final String YOU_WIN = "You win!";
+    public static final String COMPUTER_WINS = "Computer Wins!";
 
-    private final Map<String, String> winnerTable = Map.of(
-            "rr", "Tie!",
-            "ss", "Tie!",
-            "pp", "Tie!",
-            "pr", "You win",
-            "rp", "Computer Wins!",
-            "rs", "You win!",
-            "sr", "Computer Wins!",
-            "sp", "You win!",
-            "ps", "Computer Wins!");
+    private final static Map<String, String> winnerTable = Map.of(
+            "rr", TIE,
+            "ss", TIE,
+            "pp", TIE,
+            "pr", YOU_WIN,
+            "rp", COMPUTER_WINS,
+            "rs", YOU_WIN,
+            "sr", COMPUTER_WINS,
+            "sp", YOU_WIN,
+            "ps", COMPUTER_WINS);
 
-    private final String[] handSigns = { "r", "p","s"};
+    private final static String[] handSigns = { "r", "p","s"};
     private String playersHand;
 
-    TypeOne playedHand = () -> {return new Scanner(System.in).nextLine();};
+    TypeOne playedHand = () -> new Scanner(System.in).nextLine();
     TypeTwo checkInput = (String s, String[] handSigns) -> Stream.of(handSigns).anyMatch(s::equalsIgnoreCase);
     TypeThree prepareWinner = (String player, String computer) -> player+computer;
 
