@@ -29,7 +29,7 @@ public class RockPaperScissor {
     private static final String[] handSigns = { "r", "p","s"};
 
     TypeOne playedHand = () -> new Scanner(System.in).nextLine();
-    TypeTwo checkInput = (String s, String[] handSigns) -> Stream.of(handSigns).anyMatch(s::equalsIgnoreCase);
+    TypeTwo checkInput = (String s, String[] a) -> Stream.of(a).anyMatch(s::equalsIgnoreCase);
     TypeThree prepareWinner = (String player, String computer) -> player+computer;
 
     public void startGame(){
