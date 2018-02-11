@@ -28,14 +28,17 @@ public class RockPaperScissor {
     TypeThree prepareWinner = (String player, String computer) -> player+computer;
 
     public void startGame(){
-        log.info("(R)ock, (P)aper, (S)cissor");
-        String computersHand = handSigns[(int)(Math.random()*3)];
+        log.info("Welcome to my simple (R)ock, (P)aper, (S)cissor game.");
+        log.info("Chose your Hand please!");
+        log.info("Type (r) for rock, (p) for paper or (s) for scissor and press Enter");
         playersHand = playedHand.typeOne();
         while (!checkInput.typeTwo(playersHand,handSigns)){
-            log.info("Wrong input, type again");
+            log.info("Oops, it seems there went something wrong, please type again!");
             playersHand = playedHand.typeOne();
         }
 
+        String computersHand = handSigns[(int)(Math.random()*3)];
+        log.info("The computer played: "+computersHand);
         log.info(winnerTable.get(prepareWinner.typeThree(playersHand,computersHand)));
     }
 
