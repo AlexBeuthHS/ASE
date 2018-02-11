@@ -29,4 +29,13 @@ public class RockPaperScissorTest {
             RockPaperScissor game = new RockPaperScissor();
             Assert.assertEquals("rs",game.prepareWinner.typeThree("r","s"));
         }
+
+        @Test
+            public void game(){
+            ByteArrayInputStream in = new ByteArrayInputStream("r".getBytes());
+            System.setIn(in);
+            RockPaperScissor game = new RockPaperScissor();
+            game.startGame();
+        }
+
 }
