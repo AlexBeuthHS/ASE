@@ -1,20 +1,11 @@
-import java.util.Scanner;
-
 public class Application {
 
-
-
-    public static void main(String args) {
-
-        TypeOne playersHand = () -> {return new Scanner(System.in).nextLine();};
-
+    public static void main(String args[]) {
         RockPaperScissor game = new RockPaperScissor();
-        game.startGame(playersHand.typeOne());
+        game.startGame();
     }
 
-    interface TypeOne{
-        String typeOne();
-    }
+
 
 
 }

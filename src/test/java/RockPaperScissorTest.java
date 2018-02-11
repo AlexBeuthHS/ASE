@@ -22,7 +22,7 @@ public class RockPaperScissorTest {
         @Test
         public void prepareWinner() {
             RockPaperScissor game = new RockPaperScissor();
-            Assert.assertEquals(game.prepareWinner.typeThree("r","s"),"rs");
+            Assert.assertEquals("rs",game.prepareWinner.typeThree("r","s"));
         }
 
 
