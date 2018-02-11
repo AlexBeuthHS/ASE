@@ -1,11 +1,13 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.HashMap;
 import java.util.Scanner;
-import java.util.logging.Logger;
 import java.util.stream.Stream;
 
 public class RockPaperScissor {
 
-    static Logger log = Logger.getLogger(RockPaperScissor.class.getName());
+    private static final Logger logger = LogManager.getLogger(RockPaperScissor.class);
 
     private final HashMap<String, String> winnerTable = new HashMap<String, String>() {
         {
@@ -28,18 +30,18 @@ public class RockPaperScissor {
     TypeThree prepareWinner = (String player, String computer) -> player+computer;
 
     public void startGame(){
-        log.info("Welcome to my simple (R)ock, (P)aper, (S)cissor game.");
-        log.info("Chose your Hand please!");
-        log.info("Type (r) for rock, (p) for paper or (s) for scissor and press Enter");
+        logger.info("Welcome to my simple (R)ock, (P)aper, (S)cissor game.");
+        logger.info("Chose your Hand please!");
+        logger.info("Type (r) for rock, (p) for paper or (s) for scissor and press Enter");
         playersHand = playedHand.typeOne();
         while (!checkInput.typeTwo(playersHand,handSigns)){
-            log.info("Oops, it seems there went something wrong, please type again!");
+            logger.info("Oops, it seems there went something wrong, please type again!");
             playersHand = playedHand.typeOne();
         }
 
         String computersHand = handSigns[(int)(Math.random()*3)];
-        log.info("The computer played: "+computersHand);
-        log.info(winnerTable.get(prepareWinner.typeThree(playersHand,computersHand)));
+        logger.info("The computer played: " + computersHand);
+        logger.info(winnerTable.get(prepareWinner.typeThree(playersHand, computersHand)));
     }
 
     interface TypeOne{
