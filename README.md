@@ -23,7 +23,7 @@ The Diagrams have been created with [Gliffy](https://www.gliffy.com/) or exporte
 I connected my GitHub project to SonarCloud. I also had to add sonar-project properties and configure my .travis.yml configuration file.
 Click this [Link](https://sonarcloud.io/dashboard?id=ASE-RPS%3ARPS)
 ### Maven
-As im using Maven for my project it has a built in Metrics that is compareable to JDEPEND. (Dependency Diagram) 
+As im using Maven for my project it has a built in Metrics that is comparable to JDEPEND. (Dependency Diagram) 
 
 ## 3. Clean Code
 1. Unit Tests (kept readable and simple)
@@ -41,8 +41,15 @@ Click this [Link](https://travis-ci.org/AlexBeuthHS/ASE) to view my build histor
 If i had any real logging i would set jointpoints before and after my startGame() method of the class RockPaperScissor to divide the cross-cutting concerns from my core concerns.
 
 ## 6. DSL
-Under resources i added the file JenkinsfileContinuousDeployment.groovy  which is not related to this project. It is a groovy file for continuous delivery that i wrote for another project.
+Under resources i added the file JenkinsfileContinuousDeployment.groovy  which is not related to this project. 
+It can be found [here](https://github.com/AlexBeuthHS/ASE/blob/master/src/main/resources/JenkinsfileContinuousDeployment.groovy).
+It is a groovy file for continuous delivery that i wrote for another project.
 It deploys the application on sandbox and two production servers and also runs a basic smoke test.
+
+## 8. Logical Solver
+In my project a logical solver can be used to compute the winner. 
+Rules would be which hand wins against the other. 
+
 ## 7. and 9.
 ### As i could not cover the functional programming part completely (but i tried some functional programming aspects with lambdas in my Java version) i decided to rewrite my console game as well in clojure which should cover both tasks (7. and 9.).
 ### The file can be found [here](https://github.com/AlexBeuthHS/ASE/blob/master/src/main/resources/RPS.clj).
