@@ -1,3 +1,5 @@
+package rps;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -54,3 +56,4 @@ public class RockPaperScissor {
         String typeThree(String a, String b);
     }
 }
+
