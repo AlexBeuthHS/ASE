@@ -19,7 +19,7 @@ The Diagrams have been created with [Gliffy](https://www.gliffy.com/) or exporte
 ### SonarCloud:
 I connected my GitHub project to SonarCloud. I also had to add sonar-project properties and configure my .travis.yml configuration file.
 Click this [Link](https://sonarcloud.io/dashboard?id=ASE-RPS%3ARPS)
-###Maven
+### Maven
 As im using Maven for my project it has a built in Metrics that is compareable to JDEPEND. (Dependency Diagram) 
 
 ## 3. Clean Code
@@ -41,9 +41,11 @@ If i had any real logging i would set jointpoints before and after my startGame(
 Under resources i added the file JenkinsfileContinuousDeployment.groovy  which is not related to this project. It is a groovy file for continuous delivery that i wrote for another project.
 It deploys the application on sandbox and two production servers and also runs a basic smoke test.
 ## 7. and 9.
-As i could not cover the functional programming part completely (but i tried some functional programming aspects with lambdas in my Java version) i decided to rewrite my console game as well in clojure which should cover both tasks (7. and 9.).
-The file can be found under resources.
-Brief explaination:
+### As i could not cover the functional programming part completely (but i tried some functional programming aspects with lambdas in my Java version) i decided to rewrite my console game as well in clojure which should cover both tasks (7. and 9.).
+### The file can be found under resources.
+
+### Brief explaination:
+
 The first function "getPlayersHand" takes no arguments and returns "r" for rock, "p" for paper and "s" for scissors
 It iss a get function with a map of each of the valued Strings as keys. Each is associated with the value true. When the String of "hand" is looked up in this map, and the users entered String is not one of these Strings, it will return nil. That is because that key is not found in the map
 Which means it returns nil for invalid input.
