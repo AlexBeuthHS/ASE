@@ -1,5 +1,8 @@
 # Rock Paper Scissor Console Game 
 
+### I used IntelliJ IDE with Git, GitHub, SonarCloud and Travis CI.
+
+
 ##  1.UML
 The Diagrams have been created with [Gliffy](https://www.gliffy.com/) or exported from IntelliJ IDE, both use UML.
 
@@ -42,7 +45,7 @@ Under resources i added the file JenkinsfileContinuousDeployment.groovy  which i
 It deploys the application on sandbox and two production servers and also runs a basic smoke test.
 ## 7. and 9.
 ### As i could not cover the functional programming part completely (but i tried some functional programming aspects with lambdas in my Java version) i decided to rewrite my console game as well in clojure which should cover both tasks (7. and 9.).
-### The file can be found under resources.
+### The file can be found [here](https://github.com/AlexBeuthHS/ASE/blob/master/src/main/resources/RPS.clj).
 
 ### Brief explaination:
 
