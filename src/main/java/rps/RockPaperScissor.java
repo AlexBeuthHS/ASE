@@ -26,6 +26,7 @@ public class RockPaperScissor {
             "ps", COMPUTER_WINS);
 
     private static final String[] handSigns = { "r", "p","s"};
+
     TypeOne playedHand = () -> new Scanner(System.in).nextLine();
     TypeTwo checkInput = (String s, String[] handSigns) -> Stream.of(handSigns).anyMatch(s::equalsIgnoreCase);
     TypeThree prepareWinner = (String player, String computer) -> player+computer;
@@ -36,12 +37,12 @@ public class RockPaperScissor {
         logger.info("Chose your Hand please!");
         logger.info("Type (r) for rock, (p) for paper or (s) for scissor and press Enter");
         playersHand = playedHand.typeOne();
-        while (!checkInput.typeTwo(playersHand,this.handSigns)){
+        while (!checkInput.typeTwo(playersHand, handSigns)){
             logger.info("Oops, it seems there went something wrong, please type again!");
             playersHand = playedHand.typeOne();
         }
 
-        String computersHand = this.handSigns[(int)(Math.random()*3)];
+        String computersHand = handSigns[(int)(Math.random()*3)];
         logger.info("The computer played: " + computersHand);
         logger.info(winnerTable.get(prepareWinner.typeThree(playersHand, computersHand)));
     }

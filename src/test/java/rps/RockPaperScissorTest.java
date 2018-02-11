@@ -3,6 +3,8 @@ package rps;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.ByteArrayInputStream;
+
 public class RockPaperScissorTest {
 
     private final String[] handSigns = { "r", "p","s"};
@@ -27,6 +29,4 @@ public class RockPaperScissorTest {
             RockPaperScissor game = new RockPaperScissor();
             Assert.assertEquals("rs",game.prepareWinner.typeThree("r","s"));
         }
-
-
 }
