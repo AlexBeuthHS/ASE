@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.Map;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
@@ -41,8 +42,7 @@ public class RockPaperScissor {
             logger.info("Oops, it seems there went something wrong, please type again!");
             playersHand = playedHand.typeOne();
         }
-
-        String computersHand = handSigns[(int)(Math.random()*3)];
+        String computersHand = handSigns[new Random().nextInt(3)];
         logger.info("The computer played: " + computersHand);
         logger.info(winnerTable.get(prepareWinner.typeThree(playersHand, computersHand)));
     }
