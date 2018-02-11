@@ -31,7 +31,7 @@ public class RockPaperScissorTest {
         }
 
         @Test
-            public void game(){
+        public void game() {
             ByteArrayInputStream in = new ByteArrayInputStream("r".getBytes());
             System.setIn(in);
             RockPaperScissor game = new RockPaperScissor();
