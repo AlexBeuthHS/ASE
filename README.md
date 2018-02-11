@@ -40,3 +40,7 @@ If i had any real logging i would set jointpoints before and after my startGame(
 ## 6. DSL
 Under resources i added the file JenkinsfileContinuousDeployment.groovy  which is not related to this project. It is a groovy file for continuous delivery that i wrote for another project.
 It deploys the application on sandbox and two production servers and also runs a basic smoke test.
+## 7. and 9.
+As i could not cover the functional programming part completely (but i tried some functional programming aspects with lambdas in my Java version) i decided to rewrite my console game as well in clojure which should cover both tasks (7. and 9.).
+The file can be found under resources.
+Brief explaination:
