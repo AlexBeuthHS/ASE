@@ -2,6 +2,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
@@ -9,18 +10,16 @@ public class RockPaperScissor {
 
     private static final Logger logger = LogManager.getLogger(RockPaperScissor.class);
 
-    private final HashMap<String, String> winnerTable = new HashMap<String, String>() {
-        {
-            put("rr", "Tie!");
-            put("ss", "Tie!");
-            put("pp", "Tie!");
-            put("pr", "You win");
-            put("rp", "Computer Wins!");
-            put("rs", "You win!");
-            put("sr", "Computer Wins!");
-            put("sp", "You win!");
-            put("ps", "Computer Wins!");
-        }};
+    private final Map<String, String> winnerTable = Map.of(
+            "rr", "Tie!",
+            "ss", "Tie!",
+            "pp", "Tie!",
+            "pr", "You win",
+            "rp", "Computer Wins!",
+            "rs", "You win!",
+            "sr", "Computer Wins!",
+            "sp", "You win!",
+            "ps", "Computer Wins!");
 
     private final String[] handSigns = { "r", "p","s"};
     private String playersHand;
